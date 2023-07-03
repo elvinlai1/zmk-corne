@@ -70,10 +70,10 @@
 // -----------------------------------------------------------------------------------------
 
                         bindings = <
-   &kp GRAVE  &kp F1   &kp F2  &kp F3   &kp F4   &kp F5       &none    &none    &none    &kp MINUS  &kp EQUAL   &trans
-   &none   &none   &none  &none   &none   &none               &none    &none    &none    &kp LBKT   &kp RBKT    &kp BSLH
-   &none   &none   &none  &none   &none   &none               &none    &none    &none    &none      &none       &none 
-                   &kp LGUI  &trans   &kp SPACE               &kp RET   &trans    &kp RALT
+   &kp GRAVE  &kp F1   &kp F2  &kp F3   &kp F4   &kp F5                                       &none    &none    &none    &kp MINUS  &kp EQUAL   &trans
+   &none   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4               &none    &none    &none    &kp LBKT   &kp RBKT    &kp BSLH
+   &none   &none   &none  &none   &none   &none                                               &none    &none    &none    &none      &none       &bt BT_CLR
+                   &kp LGUI  &trans   &kp SPACE                                               &kp RET   &trans    &kp RALT
                         >;
                 };
         
@@ -86,9 +86,9 @@
 // -----------------------------------------------------------------------------------------
 
                         bindings = <
-    &none     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4       &none    &none    &none    &none    &none    &none
     &none     &none        &none        &none        &none        &none              &none    &none    &none    &none    &none    &none
-    &none     &none        &none        &none        &none        &none              &none    &none    &none    &none    &none    &bt BT_CLR
+    &none     &none        &none        &none        &none        &none              &none    &none    &none    &none    &none    &none
+    &none     &none        &none        &none        &none        &none              &none    &none    &none    &none    &none    &none   
                                      &bootloader  &trans     &sys_reset              &sys_reset   &trans   &bootloader
                         >;
                 };
