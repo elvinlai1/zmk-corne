@@ -36,8 +36,16 @@
                 #binding-cells = <0>;
                 tapping-term-ms = <200>;
                 bindings = <&kp N1>, <&kp N2>, <&kp N3>;
-           };
- 
+                };
+
+           gresc: grave_escape {
+                compatible = "zmk,behavior-mod-morph";
+                label = "GRAVE_ESCAPE";
+                #binding-cells = <0>;
+                bindings = <&kp ESC>, <&kp GRAVE>;
+                mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+                };
+            
         };
 
         keymap {
@@ -62,19 +70,19 @@
 
                 raise_layer {
                         bindings = <
-   &trans    &kp N1   &kp N2    &kp N3   &kp N4   &kp N5          &kp N6      &kp N7      &kp N8       &kp N9      &kp N0     &trans
-   &kp LGUI    &none    &trans    &none    &none    &kp PG_UP     &kp BSLH    &kp LBKT    &kp RBKT     &kp MINUS   &kp EQUAL  &trans
-   &trans    &none    &trans    &none    &none    &kp PG_DN       &kp GRAVE   &kp LPAR    &kp RPAR     &none       &none      &trans 
-                            &trans   &trans    &trans             &trans   &trans   &kp LSHIFT
+   &trans      &kp N1   &kp N2    &kp N3   &kp N4   &kp N5          &kp N6      &kp N7      &kp N8       &kp N9      &kp N0     &trans
+   &kp LGUI    &none    &trans    &none    &none    &kp PG_UP       &kp BSLH    &kp LBKT    &kp RBKT     &kp MINUS   &kp EQUAL  &trans
+   &kp LCTRL   &none    &trans    &none    &none    &kp PG_DN       &kp GRAVE   &kp LPAR    &kp RPAR     &none       &none      &trans 
+                                 &trans   &trans    &trans          &trans   &trans   &kp LSHIFT
                         >;
                 };
 
                 lower_layer {
                         bindings = <
-   &kp ESC      &none    &none    &none    &none      &kp LBKT        &kp RBKT     &kp LPAR   &kp RPAR    &kp MINUS   &kp EQUAL   &trans 
-   &trans       &none    &none    &none    &none      &none           &none        &kp LEFT   &kp DOWN    &kp UP      &kp RIGHT   &none
-   &trans       &none    &none    &none    &none      &none           &kp GRAVE    &none      &none       &none       &none       &trans
-                                 &trans    &trans     &trans          &none    &trans    &none
+   &gresc    &none    &none    &none    &none      &kp LBKT        &kp RBKT     &kp LPAR   &kp RPAR    &kp MINUS   &kp EQUAL   &trans 
+   &trans    &none    &none    &none    &none      &none           &none        &kp LEFT   &kp DOWN    &kp UP      &kp RIGHT   &none
+   &trans    &none    &none    &none    &none      &none           &kp GRAVE    &none      &none       &none       &none       &kp ESC
+                              &trans    &trans     &trans          &none    &trans    &none
                         >;
                 };
 
@@ -91,7 +99,7 @@
                         bindings = <
     &none     &none    &none   &none    &none    &none             &kp KP_DIVIDE    &kp N7     &kp N8   &kp N9   &kp EQUAL   &trans
     &none     &none    &none   &none    &none    &none             &kp KP_MULTIPLY  &kp N4     &kp N5   &kp N6   &kp PLUS    &kp MINUS
-    &trans    &none    &none   &none    &none    &none             &kp N0           &kp N1     &kp N2   &kp N3   &none       &kp CLEAR
+    &trans    &none    &none   &none    &none    &none             &kp N0           &kp N1     &kp N2   &kp N3   &none       &kp KP_CLEAR
                                &none    &none    &trans            &trans    &none    &trans
                         >;
                 };
