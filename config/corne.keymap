@@ -71,10 +71,10 @@
 
                 lower_layer {
                         bindings = <
-   &kp ESC      &none    &none    &none    &none      &none           &kp MINUS    &kp LBKT    &kp LPAR    &kp RPAR   &kp RBRT    &trans 
-   &trans       &none    &none    &none    &none      &none           &kp EQUAL    &kp LEFT    &kp DOWN    &kp UP     &kp RIGHT   &none
-   &trans       &none    &none    &none    &none      &none           &kp GRAVE    &kp BSLH    &none       &none      &none       &trans
-                                &trans    &trans     &trans           &none    &trans    &none
+   &kp ESC      &none    &none    &none    &none      &kp LBKT        &kp RBKT     &kp LPAR   &kp RPAR    &kp MINUS   &kp EQUAL   &trans 
+   &trans       &none    &none    &none    &none      &none           &none        &kp LEFT   &kp DOWN    &kp UP      &kp RIGHT   &none
+   &trans       &none    &none    &none    &none      &none           &kp GRAVE    &none      &none       &none       &none       &trans
+                                 &trans    &trans     &trans          &none    &trans    &none
                         >;
                 };
 
