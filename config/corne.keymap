@@ -30,25 +30,6 @@
                 };
         };
 
-        behaviors {
-           td_boot: tap_dance_bootloader {
-                compatible = "zmk,behavior-tap-dance";
-                label = "TAP_DANCE_BOOTLOADER";
-                #binding-cells = <0>;
-                tapping-term-ms = <200>;
-                bindings = <&kp N1>, <&kp N2>, <&kp N3>;
-                };
-
-           esctab: esc_tab {
-                compatible = "zmk,behavior-mod-morph";
-                label = "ESC_TAB";
-                #binding-cells = <0>;
-                bindings = <&kp ESC>, <&kp TAB>;
-                mods = <(MOD_LGUI|MOD_LALT)>;
-                };
-            
-        };
-
         keymap {
                 compatible = "zmk,keymap";
 
@@ -89,9 +70,9 @@
 
                 funcs_layer {
                         bindings = <
-   &esctab    &trans   &trans   &trans   &trans     &trans       &none    &trans   &trans         &trans        &trans   &trans 
-   &kp LALT   &trans   &trans   &trans   &trans     &trans       &none    &trans   &kp C_VOL_DN   &kp C_VOL_UP  &trans   &trans 
-   &kp LGUI   &trans   &trans   &trans   &trans     &trans       &none    &trans   &trans         &trans        &trans   &kp ESC
+   &kp TAB    &trans   &trans   &trans   &trans     &trans       &none    &trans   &trans         &trans        &trans    &trans 
+   &kp LALT   &trans   &trans   &trans   &trans     &trans       &none    &trans   &kp C_VOL_DN   &kp C_VOL_UP  &trans    &trans 
+   &kp LGUI   &trans   &trans   &trans   &trans     &trans       &none    &trans   &trans         &trans        &kp LCTRL &kp ESC
                                 &trans   &trans     &trans       &trans   &trans   &kp LSHIFT
                         >;
                 };
