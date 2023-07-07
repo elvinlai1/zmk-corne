@@ -11,7 +11,7 @@
 #define DEFAULT 0
 #define raise 1
 #define lower 2
-#define functions 3
+#define funcs 3
 #define bluetooth 4
 #define numpad 5
 
@@ -87,7 +87,7 @@
                         >;
                 };
 
-                functions_layer {
+                funcs_layer {
                         bindings = <
    &esctab    &trans   &trans   &trans   &trans     &trans       &none    &trans   &trans   &trans     &trans   &trans 
    &kp LALT   &trans   &trans   &trans   &trans     &trans       &none    &trans   &kp C_VOL_DN   &kp C_VOL_UP  &trans 
@@ -95,7 +95,6 @@
                                 &trans   &trans     &trans       &trans   &trans   &kp LSHIFT
                         >;
                 };
-
 
                 bluetooth_layer {
                         bindings = <
