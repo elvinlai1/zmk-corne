@@ -69,10 +69,10 @@
 
                 raise_layer {
                         bindings = <
-   &kp GRAVE  &kp N1    &kp N2    &kp N3   &kp N4     &kp N5           &kp N6      &kp N7      &kp N8      &kp N9      &kp N0     &trans
-   &trans     &trans    &trans    &trans   &td_LBRC   &td_RBRC         &trans      &kp UNDER   &kp MINUS   &kp PLUS    &kp EQUAL  &trans 
-   &kp LGUI   &trans    &trans    &trans   &trans     &trans           &trans      &trans      &trans      &trans      &kp BSLH   &kp ESC 
-                                  &trans   &trans     &trans           &trans      &trans      &none
+   &kp GRAVE  &kp N1    &kp N2   &kp N3   &kp N4     &kp N5           &kp N6      &kp N7      &kp N8      &kp N9      &kp N0     &trans
+   &trans     &trans    &trans   &trans   &td_LBRC   &td_RBRC         &trans      &kp UNDER   &kp MINUS   &kp PLUS    &kp EQUAL  &trans 
+   &trans     &trans    &trans   &trans   &trans     &trans           &trans      &trans      &trans      &trans      &kp BSLH   &kp ESC 
+                                 &trans   &trans     &trans           &trans      &trans      &none
                         >;
                 };
 
@@ -99,7 +99,7 @@
     &none     &none    &none   &none    &none    &none             &kp KP_DIVIDE    &kp N7     &kp N8   &kp N9   &kp EQUAL   &trans
     &none     &none    &none   &none    &none    &none             &kp KP_MULTIPLY  &kp N4     &kp N5   &kp N6   &kp PLUS    &kp MINUS
     &trans    &none    &none   &none    &none    &none             &kp N0           &kp N1     &kp N2   &kp N3   &none       &kp KP_CLEAR
-                               &none    &trans   &trans            &trans           &trans      &trans
+                               &none    &trans   &trans            &trans           &trans     &trans
                         >;
                 };
         };
