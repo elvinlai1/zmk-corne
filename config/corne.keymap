@@ -21,13 +21,6 @@
 
 
 / {
-        conditional_layers {
-                compatible = "zmk,conditional-layers";
-                tri_layer {
-                        if-layers = <1 2>;
-                        then-layer = <4>;
-                };
-        };
         
         behaviors {
                 td_LBRC: td_Left_Brackets {
@@ -102,6 +95,6 @@
                                      &none    &trans   &trans            &kp RET            &kp PLUS     &kp MINUS
                         >;
                 };
-        };
+
 };
 
